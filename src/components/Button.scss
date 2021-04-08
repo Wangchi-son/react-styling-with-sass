@@ -1,4 +1,20 @@
 $blue: #228be6;
+$glay: #495057;
+$pink: #f06595;
+
+@mixin button-color($color) {
+  background: $color;
+  &:hover {
+    background: lighten($color, 10%);
+  }
+  &:active {
+    background: darken($color, 10%);
+  }
+
+  & + & {
+    margin-left: 1rem;
+  }
+}
 
 .Button {
   display: inline-flex;
@@ -30,15 +46,18 @@ $blue: #228be6;
   }
 
   // &는 자기 자신을 가리킴
-  background: $blue;
-  &:hover {
-    background: lighten($blue, 10%);
-  }
-  &:active {
-    background: darken($blue, 10%);
+  &.blue {
+    background: $blue;
+    @include button-color($blue);
   }
 
-  & + & {
-    margin-left: 1rem;
+  &.glay {
+    background: $glay;
+    @include button-color($glay);
+  }
+
+  &.pink {
+    background: $pink;
+    @include button-color($pink);
   }
 }
