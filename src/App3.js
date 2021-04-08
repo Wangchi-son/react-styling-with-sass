@@ -27,25 +27,31 @@ function App3() {
     <ThemeProvider theme={{ palette }}>
       <AppBlock>
         <ButtonGroup>
-          <Button2 size="large">BUTTON</Button2>
+          <Button2 color="pink" size="large">
+            BUTTON
+          </Button2>
           <Button2>BUTTON</Button2>
-          <Button2 size="small">BUTTON</Button2>
-        </ButtonGroup>
-        <ButtonGroup>
-          <Button2 size="large" color="gray">
-            BUTTON
-          </Button2>
-          <Button2 color="gray">BUTTON</Button2>
-          <Button2 size="small" color="gray">
+          <Button2 color="gray" size="small">
             BUTTON
           </Button2>
         </ButtonGroup>
         <ButtonGroup>
-          <Button2 size="large" color="pink">
+          <Button2 color="pink" size="large" outline>
             BUTTON
           </Button2>
-          <Button2 color="pink">BUTTON</Button2>
-          <Button2 size="small" color="pink">
+          <Button2 outline>BUTTON</Button2>
+          <Button2 color="gray" size="small" outline>
+            BUTTON
+          </Button2>
+        </ButtonGroup>
+        <ButtonGroup>
+          <Button2 color="pink" size="large" fullWidth>
+            BUTTON
+          </Button2>
+          <Button2 size="large" fullWidth>
+            BUTTON
+          </Button2>
+          <Button2 color="gray" size="large" fullWidth>
             BUTTON
           </Button2>
         </ButtonGroup>
