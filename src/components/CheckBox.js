@@ -1,11 +1,23 @@
 import React from 'react';
+import { MdCheckBox, MdCheckBoxOutlineBlank } from 'react-icons/md';
+
+import styles from './CheckBox.module.css';
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(styles);
 
 function CheckBox({ checked, children, ...rest }) {
   return (
-    <div>
+    <div className={cx('checkbox')}>
       <label>
         <input type="checkbox" checked={checked} {...rest} />
-        <idv>{checked ? '체크됨' : '체크 안됨'}</idv>
+        <div className={cx('icon')}>
+          {checked ? (
+            <MdCheckBox className={cx('checked')} />
+          ) : (
+            <MdCheckBoxOutlineBlank />
+          )}
+        </div>
       </label>
       <span>{children}</span>
     </div>
