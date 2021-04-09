@@ -90,15 +90,17 @@ const StyledButton = styled.button`
 
 function Button2({ children, color, size, outline, fullWidth, ...rest }) {
   return (
-    <StyledButton
-      color={color}
-      size={size}
-      outline={outline}
-      fullWidth={fullWidth}
-      {...rest}
-    >
-      {children}
-    </StyledButton>
+    <>
+      <StyledButton
+        color={color}
+        size={size}
+        outline={outline}
+        fullWidth={fullWidth}
+        {...rest}
+      >
+        {children}
+      </StyledButton>
+    </>
   );
 }
 Button2.defaultProps = {
